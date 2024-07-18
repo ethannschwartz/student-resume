@@ -7,23 +7,28 @@
 
     </div>
     <ul class="flex items-center gap-4">
-      <li class="type-primary hover:text-pink-600">
+      <li data-aos="fade-down" class="type-primary hover:text-pink-600">
         <button @click="toggleDarkMode()" class="flex items-center">
           <i v-if="isDarkMode" class="fi fi-rr-sun"></i>
           <i v-else class="fi fi-rr-moon"></i>
         </button>
       </li>
-      <li class="type-primary hover:text-pink-600" data-aos="fade-down" data-aos-delay="100">
-        <a href="#about">about</a>
+      <li
+          v-for="(section, i) in sections"
+          class="type-primary hover:text-pink-600"
+          data-aos="fade-down"
+          :data-aos-delay="100 + (i * 50)"
+      >
+        <a :href="'#'+section">{{ section }}</a>
       </li>
-      <li class="type-primary hover:text-pink-600" data-aos="fade-down" data-aos-delay="150">
-        <a href="#skills">skills</a>
-      </li>
-      <li class="type-primary hover:text-pink-600" data-aos="fade-down" data-aos-delay="200">
-        <a href="#experience">experience</a>
-      </li>
-      <li class="type-primary hover:text-pink-600" data-aos="fade-down" data-aos-delay="250">
-        <a href="#contact">contact</a>
+      <li data-aos="fade-down" :data-aos-delay="100 + (sections.length * 50)">
+        <a
+            href="/assets/files/Resume-Ethan-Schwartz.pdf"
+            class="text-xs font-mono flex items-center gap-1.5 border border-black dark:border-white bg-transparent text-black hover:bg-black hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-black rounded-full px-4 py-1"
+        >
+          <i class="fi fi-rr-download"></i>
+          resume
+        </a>
       </li>
     </ul>
   </header>
@@ -33,6 +38,13 @@
 import {useState} from "#app";
 
 let isDarkMode = useState('isDarkMode', () => false);
+
+const sections = [
+    "about",
+    "skills",
+    "experience",
+    "contact",
+];
 
 const toggleDarkMode = () => {
   isDarkMode.value = !isDarkMode.value;

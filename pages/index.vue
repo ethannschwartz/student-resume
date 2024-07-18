@@ -4,6 +4,7 @@
     <About />
     <Skills />
     <Experience />
+    <Contact />
   </section>
 </template>
 
