@@ -51,7 +51,7 @@
 }
 
 .btn-primary {
-    @apply font-mono duration-150 rounded-full p-2 border bg-white border-black hover:bg-black hover:text-white;
+    @apply font-mono rounded-full p-2 border bg-white border-black hover:bg-black hover:text-white;
 }
 
 .dark .btn-primary {
