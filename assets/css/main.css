@@ -41,3 +41,19 @@
 .fi {
     @apply flex items-center;
 }
+
+.input-primary {
+    @apply duration-150 p-2 rounded-md border border-black bg-white focus-within:outline-2 outline-pink-500 ring-0;
+}
+
+.dark .input-primary {
+    @apply rounded-md border border-zinc-600 focus-within:border-pink-500 bg-zinc-800;
+}
+
+.btn-primary {
+    @apply font-mono duration-150 rounded-full p-2 border bg-white border-black hover:bg-black hover:text-white;
+}
+
+.dark .btn-primary {
+    @apply text-white bg-transparent border-white hover:bg-white hover:text-black;
+}

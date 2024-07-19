@@ -1,5 +1,5 @@
 <template>
-  <article id="skills" class="scroll-mt-12 p-16 grid grid-cols-2">
+  <article id="skills" class="scroll-mt-12 p-8 md:p-16 grid grid-cols-1 md:grid-cols-2">
     <div class="mb-4" data-aos="fade-up" v-for="category in skillsArray">
       <h5 class="mb-4 font-bold text-3xl type-secondary">{{ category.title }}</h5>
       <ul>
