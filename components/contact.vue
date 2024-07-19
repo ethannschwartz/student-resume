@@ -1,16 +1,20 @@
 <template>
-  <section id="contact" class="border-t grid md:grid-cols-2 px-8 py-16 md:p-16 md:py-36 !pb-48  gap-16">
+  <section id="contact" class="grid md:grid-cols-2 px-8 py-16 md:p-16 md:py-36 !pb-48  gap-16">
     <div>
-      <h5 class="type-secondary font-extrabold text-5xl">Let's chat</h5>
-      <p class="type-primary text-sm">
+      <h5 data-aos="fade-up" class="type-secondary font-extrabold text-5xl">Let's chat</h5>
+      <p :data-aos-delay="50" data-aos="fade-up" class="type-primary text-sm">
         If you liked what you read and you think I could be of service, don't hesitate to reach out.
       </p>
     </div>
 <!--    write me a contact me form  -->
-    <form class="flex flex-col gap-6 max-w-md w-full">
-      <input class="input-primary" type="text" placeholder="Name">
-      <input class="input-primary" type="email" placeholder="Email">
-      <textarea class="input-primary" placeholder="Message"></textarea>
+    <form
+        action="https://formspree.io/f/mldrgrnb"
+        method="POST"
+        class="flex flex-col gap-6 max-w-md w-full"
+    >
+      <input class="input-primary" type="text" name="name" placeholder="Name">
+      <input class="input-primary" type="email" name="email" placeholder="Email">
+      <textarea class="input-primary resize-none" name="message" rows="6" placeholder="Message"></textarea>
       <button class="btn-primary" type="submit">Submit</button>
     </form>
   </section>

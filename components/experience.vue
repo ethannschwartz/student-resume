@@ -1,27 +1,38 @@
 <template>
   <section id="experience" class="h-auto p-8 md:p-16 py-36 md:py-36 -scroll-mt-8">
-    <h4 data-aos="fade-up" class="font-bold type-secondary text-5xl md:text-5xl mb-4">Experience</h4>
-    <ul class="gap-16 grid grid-cols-1 md:grid-cols-2">
-      <li data-aos="fade-up" :data-aos-delay="100 * (i+1)" v-for="(experience, i) in experiences">
-        <h5 class="w-fit font-bold type-primary group mb-4 flex items-center gap-2">
-          <a :href="experience.link" class="group-hover:underline underline-offset-4">{{ experience.title }}</a>
-          <i class="duration-150 fi fi-rr-arrow-right -translate-x-2 group-hover:translate-x-0 opacity-0 group-hover:opacity-100"></i>
-        </h5>
-        <img
-            :src="experience.image"
-            :alt="`${experience.title} preview`"
-            class="overflow-hidden rounded-md mb-4"
-        />
-        <div data-aos="fade-up">
-          <ul>
-            <li
-                data-aos="fade-up"
-                class="type-primary"
-                v-for="item in experience.achievements"
-            >
-              {{ item }}
-            </li>
-          </ul>
+    <h4 data-aos="fade-up" class="font-bold type-secondary text-5xl md:text-5xl mb-12">Experience</h4>
+    <ul class="gap-64 grid grid-cols-1">
+
+      <li v-for="(experience, i) in experiences" class="gap-16 grid grid-cols-1 md:grid-cols-2">
+        <div
+            data-aos="fade-up"
+            :data-aos-delay="100 * (i+1)" :class="i % 2 === 0 ? 'order-2' : ''"
+        >
+          <div class="mb-4">
+            <h5 class="w-fit font-bold type-primary group flex items-center gap-2">
+              <a :href="experience.link" class="text-3xl group-hover:underline underline-offset-4">{{ experience.title }}</a>
+              <i class="duration-150 fi fi-rr-arrow-right -translate-x-2 group-hover:translate-x-0 opacity-0 group-hover:opacity-100"></i>
+            </h5>
+            <p class="type-secondary text-sm">{{ experience.description }}</p>
+          </div>
+          <div data-aos="fade-up">
+            <ul class="grid grid-cols-1 lg:grid-cols-2">
+              <li
+                  data-aos="fade-up"
+                  class="type-primary"
+                  v-for="item in experience.achievements"
+              >
+                {{ item }}
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <Carousel :touch-drag="true" :items-to-show="1" :autoplay="2000" :pause-autoplay-on-hover="true" :wrap-around="true">
+            <Slide v-for="slide in experience.images" :key="slide">
+              <img :src="slide" alt="">
+            </Slide>
+          </Carousel>
         </div>
       </li>
     </ul>
@@ -29,14 +40,35 @@
 </template>
 
 <script setup>
-import seclockPreview from '../assets/images/Screen Shot 2024-07-17 at 1.09.00 PM.png';
-import semestrPreview from '../assets/images/img.png';
+import seclockImage3 from "assets/images/seclock/img_2.png";
+import seclockImage2 from "../assets/images/seclock/img_1.png";
+import seclockImage1 from "assets/images/seclock/img.png";
+import seclockImage4 from "../assets/images/seclock/img_3.png";
+import semestrImage4 from "assets/images/semestr/img_3.png";
+import semestrImage2 from "../assets/images/semestr/img_1.png";
+import semestrImage3 from "../assets/images/semestr/img_2.png";
+import semestrImage1 from "assets/images/semestr/img.png";
+
+const seclockImages = [
+  seclockImage1,
+  seclockImage2,
+  seclockImage3,
+  seclockImage4,
+];
+
+const semestrImages = [
+  semestrImage1,
+  semestrImage2,
+  semestrImage3,
+  semestrImage4,
+];
 
 const experiences = [
   {
     title: "SECLOCK",
     link: "https://seclock.com",
-    image: seclockPreview,
+    images: seclockImages,
+    description: "Full stack developer",
     achievements: [
       "Vue",
       "Laravel",
@@ -57,7 +89,8 @@ const experiences = [
   {
     title: "Semestr",
     link: "https://semestr.io",
-    image: semestrPreview,
+    images: semestrImages,
+    description: "Full stack developer  •  Team Lead  •  Founder & CEO",
     achievements: [
       "Angular",
       "TailwindCSS",
