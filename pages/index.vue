@@ -3,13 +3,13 @@
     <h1 class="font-extrabold text-4xl md:text-7xl type-primary mb-8">
       Nuxt Template
     </h1>
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <ul class="p-4 grid grid-cols-1 md:grid-cols-2 gap-8">
       <li
           v-for="(item, i) in included"
           data-aos="fade-down"
           :data-aos-delay="(i * 50) + 100"
       >
-        <div class="block hover:scale-[1.02] duration-150 hover:shadow-xl !shadow-teal-100 w-96 border border-black dark:border-teal-400 rounded-xl p-8">
+        <div class="block hover:scale-[1.02] duration-150 hover:shadow-xl !shadow-teal-100 dark:!shadow-teal-900 w-full md:w-96 border border-black dark:border-teal-400 rounded-xl p-4  md:p-8">
           <h2 class="text-black dark:text-teal-400 font-bold">{{ item.name }}</h2>
           <p class="dark:text-white">{{ item.description }}</p>
         </div>
