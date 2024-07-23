@@ -1,8 +1,7 @@
 <template>
-  <section id="experience" class="h-auto p-8 md:p-16 py-36 md:py-36 -scroll-mt-8">
+  <section id="experience" class="h-auto p-4 md:p-16 py-36 md:py-36 -scroll-mt-8">
     <h4 data-aos="fade-up" class="font-bold type-secondary text-5xl md:text-5xl mb-12">Experience</h4>
-    <ul class="gap-64 grid grid-cols-1">
-
+    <ul class="gap-24 md:gap-64 grid grid-cols-1">
       <li v-for="(experience, i) in experiences" class="gap-16 grid grid-cols-1 md:grid-cols-2">
         <div
             data-aos="fade-up"

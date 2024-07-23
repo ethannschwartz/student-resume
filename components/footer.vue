@@ -1,5 +1,5 @@
 <template>
-  <footer class="fixed bottom-0 left-0 right-0 type-primary flex items-center justify-between p-8 md:px-16">
+  <footer class="fixed bottom-0 left-0 right-0 type-primary flex items-center justify-between p-4 md:px-16">
     <span class="block w-fit px-6 py-2 my-8 border border-black dark:border-white rounded-full">
       <a class="text-sm font-mono group flex items-center gap-1.5" href="mailto:e.schwartz@me.com">
         <i class="fi fi-rr-envelope"></i>

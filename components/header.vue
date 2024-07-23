@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-zinc-tier-1/10 backdrop-blur z-40 flex items-center justify-between fixed top-0 left-0 right-0 py-4 px-8 md:py-6 md:px-16">
+  <header class="bg-zinc-tier-1/10 backdrop-blur z-40 flex items-center justify-between fixed top-0 left-0 right-0 py-4 px-4 md:py-6 md:px-16">
     <div data-aos="fade" data-aos-delay="100" class="flex items-center gap-2">
       <a href="#" class="text-emerald-600 flex items-center gap-2">
         <pre>Eitan Schwartz<span class="flex items-center text-xs type-secondary font-mono">(+972) 053-324-4272 <i class="fi fi-brands-whatsapp"></i></span></pre>
@@ -34,7 +34,7 @@
       </li>
     </ul>
     <Transition name="slide-left">
-      <div v-if="isMenuSeen" class="bg-white dark:bg-zinc-800 p-8 md:p-16 fixed inset-0 h-screen w-screen z-50">
+      <div v-if="isMenuSeen" class="bg-white dark:bg-zinc-800 py-8 px-4 md:p-16 fixed inset-0 h-screen w-screen z-50">
         <div class="type-primary mb-4 flex justify-end items-center">
           <button>
             <i @click="toggleMobileMenu()" class="fi fi-rr-cross"></i>
@@ -50,7 +50,7 @@
             <a
                 @click="isMenuSeen = false"
                 :href="'#'+section"
-                class="font-medium block active:bg-zinc-100 dark:active:bg-zinc-700 p-2 rounded-md w-full"
+                class="capitalize font-medium block active:bg-zinc-100 dark:active:bg-zinc-700 p-2 rounded-md w-full"
             >
               {{ section }}
             </a>

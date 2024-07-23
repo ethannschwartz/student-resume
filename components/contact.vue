@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="grid md:grid-cols-2 px-8 py-16 md:p-16 md:py-36 !pb-48  gap-16">
+  <section id="contact" class="grid md:grid-cols-2 px-4 py-16 md:p-16 md:py-36 !pb-48  gap-16">
     <div>
       <h5 data-aos="fade-up" class="type-secondary font-extrabold text-5xl">Let's chat</h5>
       <p :data-aos-delay="50" data-aos="fade-up" class="type-primary text-sm">
