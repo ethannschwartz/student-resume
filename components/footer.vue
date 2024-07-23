@@ -24,7 +24,7 @@
             }"
         >
           <a  :href="link.href" class="group">
-            <i :class="link.iconClass" class="fi text-xl group-hover:text-pink-600"></i>
+            <i :class="link.iconClass" class="fi text-xl group-hover:text-emerald-600 dark:group-hover:text-emerald-400"></i>
           </a>
         </UTooltip>
       </li>

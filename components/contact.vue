@@ -10,14 +10,26 @@
     <form
         action="https://formspree.io/f/mldrgrnb"
         method="POST"
-        class="flex flex-col gap-6 max-w-md w-full"
+        class="type-primary flex flex-col gap-6 max-w-md w-full"
     >
-      <input class="input-primary" type="text" name="name" placeholder="Name">
-      <input class="input-primary" type="email" name="email" placeholder="Email">
-      <textarea class="input-primary resize-none" name="message" rows="6" placeholder="Message"></textarea>
-      <button class="btn-primary" type="submit">Submit</button>
+      <input v-model="form.name" class="input-primary" type="text" name="name" placeholder="Name">
+      <input v-model="form.email" class="input-primary" type="email" name="email" placeholder="Email">
+      <textarea v-model="form.message" class="input-primary resize-none" name="message" rows="6" placeholder="Message"></textarea>
+      <button
+          :disabled="!(form.name && form.email && form.message)"
+          class="btn-primary"
+          type="submit"
+      >
+        Submit
+      </button>
     </form>
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+const form = reactive({
+  name: "",
+  email: "",
+  message: "",
+});
+</script>

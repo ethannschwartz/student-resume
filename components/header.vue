@@ -25,7 +25,7 @@
       </button>
     </div>
     <ul class="hidden md:flex items-center gap-4">
-      <li data-aos="fade-down" class="type-primary hover:text-emerald-600">
+      <li data-aos="fade-down" class="type-primary hover:text-emerald-600 dark:hover:text-emerald-400">
         <UTooltip
             :text="`Turn dark mode ${isDarkMode ? 'off' : 'on'}`"
             class="flex items-center"
@@ -38,7 +38,7 @@
       </li>
       <li
           v-for="(section, i) in sections"
-          class="type-primary hover:text-emerald-600"
+          class="type-primary hover:text-emerald-600 dark:hover:text-emerald-400"
           data-aos="fade-down"
           :data-aos-delay="100 + (i * 50)"
       >
