@@ -9,6 +9,8 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-
-  modules: ["nuxt-aos", "vue3-carousel-nuxt"]
+    site: {
+      url: "https://master.d2pnv63bvvqq5p.amplifyapp.com/",
+    },
+  modules: ["nuxt-aos", "vue3-carousel-nuxt", "@nuxtjs/sitemap"]
 })
