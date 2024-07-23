@@ -16,4 +16,5 @@
 
 <script setup>
 const profileImage = 'https://media.licdn.com/dms/image/D4D03AQGD1EAU8MBV-Q/profile-displayphoto-shrink_800_800/0/1685896661231?e=1726704000&v=beta&t=KUw90jXFLXZxC9twpfai-c19DAGua5FtdEguOVmK8HQ';
+
 </script>
