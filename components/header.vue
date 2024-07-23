@@ -13,7 +13,7 @@
     <div class="flex gap-4 items-center">
       <a
           href="/assets/files/Resume-Ethan-Schwartz.pdf"
-          class="text-xs font-mono flex items-center gap-1 border border-black dark:border-white bg-transparent text-black hover:bg-black hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-black rounded-full px-4 py-1"
+          class="hidden text-xs font-mono md:flex items-center gap-1 border border-black dark:border-white bg-transparent text-black hover:bg-black hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-black rounded-full px-4 py-1"
       >
         <i class="fi fi-rr-resume"></i>
         resume
