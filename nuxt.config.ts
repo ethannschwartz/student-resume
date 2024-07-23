@@ -10,17 +10,23 @@ export default defineNuxtConfig({
     },
   },
   site: {
-    url: "https://master.d2pnv63bvvqq5p.amplifyapp.com/",
+    // url: "enter-site-url-here ",
   },
   app: {
     head: {
       meta: [
         {
           name: 'google-site-verification',
-          content: 'ypd0t9ZA4pKl38gtH5GAbitEWQRqHaNjpKgB1E7vlWc',
+          // content: 'enter-site-validation-key-here',
         },
       ],
     },
   },
-  modules: ["nuxt-aos", "vue3-carousel-nuxt", "@nuxtjs/sitemap", "@nuxt/ui"],
+  modules: [
+    "nuxt-aos",
+    "vue3-carousel-nuxt",
+    "@nuxtjs/sitemap",
+    "@nuxt/ui",
+    "@nuxt/image"
+  ],
 })
