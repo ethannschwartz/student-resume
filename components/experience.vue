@@ -9,8 +9,15 @@
         >
           <div class="mb-4">
             <h5 class="w-fit font-bold type-primary group flex items-center gap-2">
-              <a :href="experience.link" class="text-3xl group-hover:underline underline-offset-4">{{ experience.title }}</a>
-              <i class="duration-150 fi fi-rr-arrow-right -translate-x-2 group-hover:translate-x-0 opacity-0 group-hover:opacity-100"></i>
+              <UTooltip
+                  class="flex items-center"
+                  :text="`Visit ${experience.title}`"
+                  :popper="{
+                    placement: 'right',
+                  }"
+              >
+                <a :href="experience.link" class="text-3xl group-hover:underline underline-offset-4">{{ experience.title }}</a>
+              </UTooltip>
             </h5>
             <p class="type-secondary text-sm">{{ experience.description }}</p>
           </div>

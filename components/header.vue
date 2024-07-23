@@ -5,7 +5,9 @@
         <div class="!font-mono">
           Eitan Schwartz
           <span class="flex items-center text-xs type-secondary font-mono">
-            <a class="flex gap-1.5 items-center font-mono text-xs" href="tel:+972 053-324-4272">053-324-4272 <i class="fi fi-brands-whatsapp"></i></a>
+            <UTooltip text="Call me" class="flex items-center">
+              <a class="flex gap-1.5 items-center font-mono text-xs" href="tel:+972 053-324-4272">053-324-4272 <i class="fi fi-brands-whatsapp"></i></a>
+            </UTooltip>
           </span>
         </div>
       </div>
@@ -24,10 +26,15 @@
     </div>
     <ul class="hidden md:flex items-center gap-4">
       <li data-aos="fade-down" class="type-primary hover:text-emerald-600">
-        <button @click="toggleDarkMode()" class="flex items-center">
-          <i v-if="isDarkMode" class="fi fi-rr-sun"></i>
-          <i v-else class="fi fi-rr-moon"></i>
-        </button>
+        <UTooltip
+            :text="`Turn dark mode ${isDarkMode ? 'off' : 'on'}`"
+            class="flex items-center"
+        >
+          <button @click="toggleDarkMode()" class="flex items-center">
+            <i v-if="isDarkMode" class="fi fi-rr-sun"></i>
+            <i v-else class="fi fi-rr-moon"></i>
+          </button>
+        </UTooltip>
       </li>
       <li
           v-for="(section, i) in sections"
@@ -38,13 +45,16 @@
         <a :href="'#'+section">{{ section }}</a>
       </li>
       <li data-aos="fade-down" :data-aos-delay="100 + (sections.length * 50)">
-        <a
-            href="/assets/files/Resume-Ethan-Schwartz.pdf"
-            class="text-xs font-mono hidden md:flex items-center gap-1 border border-black dark:border-white bg-transparent text-black hover:bg-black hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-black rounded-full px-4 py-1"
-        >
-          <i class="fi fi-rr-resume"></i>
-          resume
-        </a>
+        <UTooltip text="Check out my resume" :open-delay="500" class="flex items-center">
+          <a
+              target="_blank"
+              href="/assets/files/Resume-Ethan-Schwartz.pdf"
+              class="text-xs font-mono hidden md:flex items-center gap-1 border border-black dark:border-white bg-transparent text-black hover:bg-black hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-black rounded-full px-4 py-1"
+          >
+            <i class="fi fi-rr-resume"></i>
+            resume
+          </a>
+        </UTooltip>
       </li>
     </ul>
     <Transition name="slide-left">
