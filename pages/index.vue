@@ -3,7 +3,7 @@
     <h1 class="font-extrabold text-4xl md:text-7xl type-primary mb-8">
       Nuxt Template
     </h1>
-    <ul class="p-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <ul class="mb-8 p-4 grid grid-cols-1 md:grid-cols-2 gap-8">
       <li
           v-for="(item, i) in included"
           data-aos="fade-down"
@@ -15,6 +15,9 @@
         </div>
       </li>
     </ul>
+    <div class="bg-black rounded-md text-white font-mono p-8">
+      Check out the <a class="font-mono text-teal-400 hover:underline underline-offset-4" href="https://github.com/ethannschwartz/nuxt-template/blob/master/README.md">Github Repo</a> for more documentation
+    </div>
   </section>
 </template>
 
