@@ -1,13 +1,27 @@
 <template>
   <header class="bg-zinc-tier-1/10 backdrop-blur z-40 flex items-center justify-between fixed top-0 left-0 right-0 py-4 px-4 md:py-6 md:px-16">
-    <div data-aos="fade" data-aos-delay="100" class="flex items-center gap-2">
-      <a href="#" class="text-emerald-600 flex items-center gap-2">
-        <pre>Eitan Schwartz<span class="flex items-center text-xs type-secondary font-mono">(+972) 053-324-4272 <i class="fi fi-brands-whatsapp"></i></span></pre>
-      </a>
+    <div data-aos="fade" data-aos-delay="100" class="flex items-center">
+      <div class="text-emerald-600 block items-center">
+        <div class="!font-mono">
+          Eitan Schwartz
+          <span class="flex items-center text-xs type-secondary font-mono">
+            <a class="flex gap-1.5 items-center font-mono text-xs" href="tel:+972 053-324-4272">053-324-4272 <i class="fi fi-brands-whatsapp"></i></a>
+          </span>
+        </div>
+      </div>
     </div>
-    <button @click="toggleMobileMenu()" class="type-primary flex flex-col gap-1.5 items-center md:hidden">
-      <i class="fi fi-rr-grip-lines"></i>
-    </button>
+    <div class="flex gap-4 items-center">
+      <a
+          href="/assets/files/Resume-Ethan-Schwartz.pdf"
+          class="text-xs font-mono flex items-center gap-1 border border-black dark:border-white bg-transparent text-black hover:bg-black hover:text-white dark:text-white dark:hover:bg-white dark:hover:text-black rounded-full px-4 py-1"
+      >
+        <i class="fi fi-rr-resume"></i>
+        resume
+      </a>
+      <button @click="toggleMobileMenu()" class="type-primary flex flex-col gap-1.5 items-center md:hidden">
+        <i class="fi fi-rr-grip-lines"></i>
+      </button>
+    </div>
     <ul class="hidden md:flex items-center gap-4">
       <li data-aos="fade-down" class="type-primary hover:text-emerald-600">
         <button @click="toggleDarkMode()" class="flex items-center">
