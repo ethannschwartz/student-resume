@@ -5,7 +5,8 @@
       <li v-for="(experience, i) in experiences" class="gap-16 grid grid-cols-1 md:grid-cols-2">
         <div
             data-aos="fade-up"
-            :data-aos-delay="100 * (i+1)" :class="i % 2 === 0 ? 'order-2' : ''"
+            :data-aos-delay="100 * (i+1)"
+            :class="i % 2 === 0 ? 'md:order-1': ''"
         >
           <div class="mb-4">
             <h5 class="w-fit font-bold type-primary group flex items-center gap-2">

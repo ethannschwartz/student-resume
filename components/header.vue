@@ -58,7 +58,7 @@
       </li>
     </ul>
     <Transition name="slide-left">
-      <div v-if="isMenuSeen" class="bg-white dark:bg-zinc-800 py-8 px-4 md:p-16 fixed inset-0 h-screen w-screen z-50">
+      <div v-if="isMenuSeen" class="bg-white dark:bg-zinc-900 py-8 px-4 md:p-16 fixed inset-0 h-screen w-screen z-50">
         <div class="type-primary mb-4 flex justify-end items-center">
           <button>
             <i @click="toggleMobileMenu()" class="fi fi-rr-cross"></i>
@@ -74,7 +74,7 @@
             <a
                 @click="isMenuSeen = false"
                 :href="'#'+section"
-                class="capitalize font-medium block active:bg-zinc-100 dark:active:bg-zinc-700 p-2 rounded-md w-full"
+                class="capitalize font-medium block active:bg-zinc-100 dark:active:bg-zinc-800 p-2 rounded-md w-full"
             >
               {{ section }}
             </a>
