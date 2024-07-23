@@ -15,8 +15,6 @@
           <i v-else class="fi fi-rr-moon"></i>
         </button>
       </li>
-
-
       <li
           v-for="(section, i) in sections"
           class="type-primary hover:text-emerald-600"
