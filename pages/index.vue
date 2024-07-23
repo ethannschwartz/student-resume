@@ -14,13 +14,4 @@ useSeoMeta({
   description: "Full stack software developer living in Tel Aviv-Yafo. Experienced in Angular, Vue, React, Nuxt.js, Next.js, PHP, Laravel, SQL, and more.",
   keywords: "Software engineer, software developer, full stack developer, front end developer, vue developer, laravel developer, angular developer, experience programmer",
 });
-
-useHead({
-  meta: [
-    {
-      name: 'google-site-verification',
-      content: 'ypd0t9ZA4pKl38gtH5GAbitEWQRqHaNjpKgB1E7vlWc',
-    },
-  ],
-})
 </script>

@@ -9,8 +9,18 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-    site: {
-      url: "https://master.d2pnv63bvvqq5p.amplifyapp.com/",
+  site: {
+    url: "https://master.d2pnv63bvvqq5p.amplifyapp.com/",
+  },
+  app: {
+    head: {
+      meta: [
+        {
+          name: 'google-site-verification',
+          content: 'ypd0t9ZA4pKl38gtH5GAbitEWQRqHaNjpKgB1E7vlWc',
+        },
+      ],
     },
-  modules: ["nuxt-aos", "vue3-carousel-nuxt", "@nuxtjs/sitemap"]
+  },
+  modules: ["nuxt-aos", "vue3-carousel-nuxt", "@nuxtjs/sitemap"],
 })
