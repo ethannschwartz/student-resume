@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed top-0 left-0 right-0 px-8 py-4 flex items-center justify-between">
+  <header class="p-6 bg-teal-100 dark:bg-teal-950 flex items-center justify-between">
     <h1 class="font-bold type-primary">Nuxt Template</h1>
     <UTooltip :text="`Turn dark mode ${useState('isDarkMode').value ? 'off':'on'}`">
       <button @click="toggleDarkMode">

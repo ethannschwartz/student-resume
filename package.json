@@ -14,7 +14,6 @@
     "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^2.17.0",
     "@nuxtjs/sitemap": "^5.3.5",
-    "flaticon": "^0.1.0",
     "nuxt": "^3.12.3",
     "nuxt-aos": "^1.2.5",
     "vue": "latest",
