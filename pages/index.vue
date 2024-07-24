@@ -11,7 +11,7 @@
     <ul class="mb-8 p-4 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-8">
       <li
           v-for="(item, i) in included"
-          data-aos="fade-down"
+          data-aos="flip-down"
           :data-aos-delay="(i * 50) + 100"
       >
         <UTooltip text="View documentation">
