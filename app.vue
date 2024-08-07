@@ -1,5 +1,5 @@
 <template>
-  <NuxtLayout :class="useState('isDarkMode').value ? ' dark ' : ''">
+  <NuxtLayout :class="isDarkMode ? ' dark ' : ''">
     <NuxtPage />
   </NuxtLayout>
 </template>
