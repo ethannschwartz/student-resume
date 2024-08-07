@@ -1,11 +1,8 @@
 <template>
   <section class="p-4 md:p-8 h-auto flex flex-col items-center justify-center w-screen">
     <div class="text-center mb-4 md:mb-8">
-      <img class="w-24 mx-auto block dark:hidden" src="https://nuxtjs.ir/logos/nuxt-square.svg" alt="">
-      <img class="w-24 mx-auto hidden dark:block" src="https://nuxtjs.ir/logos/nuxt-square-white.svg" alt="">
-      <h1 class="font-extrabold text-4xl md:text-7xl type-primary mb-4">
-        Nuxt Template
-      </h1>
+      <Logo class="w-24" />
+      <h1 class="font-extrabold text-4xl md:text-7xl type-primary mb-4">Nuxt Template</h1>
       <p class="opacity-75 type-primary text-base font-light">This is my personal project kickstarter</p>
     </div>
     <ul class="mb-8 p-4 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-8">

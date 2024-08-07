@@ -1,8 +1,7 @@
 <template>
   <header data-aos="fade-down" class="z-20 sticky top-0 p-6 bg-teal-50 dark:bg-teal-950 flex items-center justify-between">
     <h1 class="flex items-center gap-1 font-bold type-primary">
-      <img class="w-5 mx-auto block dark:hidden" src="https://nuxtjs.ir/logos/nuxt-square.svg" alt="">
-      <img class="w-5 mx-auto hidden dark:block" src="https://nuxtjs.ir/logos/nuxt-square-white.svg" alt="">
+      <Logo class="w-5" />
       Nuxt Template
     </h1>
     <UTooltip :text="`Turn dark mode ${isDarkMode ? 'off':'on'}`">
