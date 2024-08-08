@@ -1,5 +1,5 @@
 <template>
-  <header data-aos="fade-down" class="z-20 sticky top-0 p-6 bg-teal-50 dark:bg-teal-950 flex items-center justify-between">
+  <header class="z-20 sticky top-0 p-6 bg-teal-50 dark:bg-teal-950 flex items-center justify-between">
     <h1 class="flex items-center gap-1 font-bold type-primary">
       <Logo class="w-5" />
       Nuxt Template
