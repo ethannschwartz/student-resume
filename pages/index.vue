@@ -5,17 +5,17 @@
       <h1 class="font-extrabold text-4xl md:text-7xl type-primary mb-4">Nuxt Template</h1>
       <p class="opacity-75 type-primary text-base font-light">This is my personal project kickstarter</p>
     </div>
-    <ul class="mb-8 p-4 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <ul class="max-w-6xl mb-8 p-4 md:px-16 grid grid-cols-1 md:grid-cols-2 gap-8">
       <li
           v-for="(item, i) in included"
           data-aos="flip-down"
           :data-aos-delay="(i * 50) + 100"
       >
         <UTooltip text="View documentation">
-          <a :href="item.href" class="block hover:scale-[1.02] duration-150 hover:shadow-md !shadow-teal-600/20 dark:!shadow-teal-900 w-full border h-full border-teal-600/25 dark:hover:border-white hover:border-black dark:border-teal-400 rounded-xl p-4  md:p-8">
+          <a :href="item.href" class="block hover:scale-[1.02] duration-150 hover:shadow-md !shadow-teal-600/20 dark:!shadow-teal-900 w-full border h-48 border-teal-600/25 dark:hover:border-white hover:border-black dark:border-teal-400 rounded-xl p-4  md:p-8">
             <img :src="item.icon" alt="" class="w-auto h-8 mb-2">
             <h2 class="text-black text-lg dark:text-teal-400 font-bold">{{ item.name }}</h2>
-            <p class="dark:text-white">{{ item.description }}</p>
+            <p class="dark:text-white line-clamp-3">{{ item.description }}</p>
           </a>
         </UTooltip>
       </li>
@@ -58,7 +58,7 @@ let included = [
   {
     name: "Nuxt UI",
     href: "https://ui.nuxt.com/",
-    icon: "https://nuxtjs.ir/logos/nuxt-square.svg",
+    icon: `https://nuxtjs.ir/logos/nuxt-square.svg`,
     description: "Access a diverse selection of components offered by Nuxt UI for a consistent and intuitive user experience.",
   },
   // {
