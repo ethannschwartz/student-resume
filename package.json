@@ -1,0 +1,21 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@flaticon/flaticon-uicons": "^3.3.1",
+    "@nuxt/icon": "^1.5.2",
+    "@nuxt/ui": "^2.20.0",
+    "@nuxtjs/color-mode": "^3.5.2",
+    "nuxt": "^3.13.0",
+    "vue": "latest",
+    "vue-router": "latest"
+  }
+}

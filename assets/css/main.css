@@ -1,0 +1,59 @@
+@import "@flaticon/flaticon-uicons/css/brands/all.css";
+@import "@flaticon/flaticon-uicons/css/all/all.rounded.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Plusjakartadisplay', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.type-primary {
+    @apply text-zinc-800 dark:text-zinc-200;
+}
+
+.type-secondary {
+    @apply text-zinc-600 dark:text-zinc-400;
+}
+
+.bg-zinc-tier-1 {
+    @apply bg-white dark:bg-zinc-900;
+}
+
+.bg-zinc-tier-2 {
+    @apply bg-zinc-200 dark:bg-zinc-800;
+}
+
+.bg-zinc-tier-3 {
+    @apply bg-zinc-300 dark:bg-zinc-700;
+}
+
+.bg-zinc-tier-4 {
+    @apply bg-zinc-400 dark:bg-zinc-600;
+}
+
+.bg-zinc-tier-5 {
+    @apply bg-zinc-500;
+}
+
+.fi {
+    @apply flex items-center;
+}
+
+.input-primary {
+    @apply duration-150 p-2 rounded-md border border-black bg-white focus-within:outline-2 outline-emerald-500 ring-0;
+}
+
+.dark .input-primary {
+    @apply rounded-md border border-zinc-600 focus-within:border-emerald-500 bg-zinc-800;
+}
+
+.btn-primary {
+    @apply font-mono rounded-full p-2 border bg-white border-black hover:bg-black hover:text-white disabled:opacity-50 disabled:pointer-events-none;
+}
+
+.dark .btn-primary {
+    @apply text-white bg-transparent border-white hover:bg-white hover:text-black;
+}
