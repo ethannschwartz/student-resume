@@ -33,7 +33,7 @@ onMounted(() => {
   if(languagePreference !== 'en') {
     setLocale(languagePreference);
   }
-})
+});
 
 const languages = [
   {
