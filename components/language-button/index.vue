@@ -6,18 +6,12 @@
       class="bg-white z-50 absolute top-full right-0 w-40 p-1 border-black border rounded-md shadow-md duration-150"
   >
     <button
-        @click="setLocale('en')"
+        v-for="language in languages"
+        @click="updateLanguage(language.value)"
         class="text-left w-full text-sm px-3 py-1 rounded hover:bg-zinc-100 active:bg-zinc-200"
-        :class="locale!=='he' ?  'font-bold' : 'opacity-75 hover:opacity-100' "
+        :class="locale === language.value ?  'font-bold' : 'opacity-75 hover:opacity-100' "
     >
-      English
-    </button>
-    <button
-        @click="setLocale('he')"
-        class="text-left w-full text-sm px-3 py-1 rounded hover:bg-zinc-100 active:bg-zinc-200"
-        :class="locale==='he' ?  'font-bold' : 'opacity-75 hover:opacity-100' "
-    >
-      עברית
+      {{ language.label }}
     </button>
   </div>
 </div>
@@ -28,4 +22,45 @@
 const { setLocale, locale } = useI18n();
 
 const isVisible = ref(false);
+
+const updateLanguage = (language) => {
+  setLocale(language);
+  localStorage.setItem('language', language);
+};
+
+const languages = [
+  {
+    label: "English",
+    value: "en",
+  },
+  {
+    label: "Español",
+    value: "es",
+  },
+  {
+    label: "Português",
+    value: "pt",
+  },
+  {
+    label: "Français",
+    value: "fr",
+  },
+  {
+    label: "עברית",
+    value: "he",
+  },
+  {
+    label: "Deutsch",
+    value: "de",
+  },
+  {
+    label: "Italiano",
+    value: "it",
+  },
+  {
+    label: "Latin",
+    value: "la",
+  },
+];
+
 </script>

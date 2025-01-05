@@ -4,7 +4,7 @@
       <h5>{{ $t('Oryan Malka Schwartz') }}</h5>
       <Navbar :active-link="activeLink" />
     </header>
-    <main>
+    <main :dir="locale === 'he' ? 'rtl' : 'ltr'" :class="locale !== 'he' ? '!text-left' : '!text-right'">
       <Summary id="Summary" />
       <Education id="Education" />
       <Skills id="Skills" />
@@ -17,6 +17,8 @@
 <script setup>
 const activeLink = ref('');
 const sections = ref([]);
+
+const { locale } = useI18n();
 
 const updateActiveLink = (entries) => {
   entries.forEach((entry) => {
