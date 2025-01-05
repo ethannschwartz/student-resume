@@ -21,5 +21,8 @@ export default defineNuxtConfig({
     primary: 'green',
     gray: 'zinc'
   },
-  modules: ['@nuxt/icon', '@nuxt/ui', '@nuxtjs/color-mode']
+  i18n: {
+    vueI18n: './i18n.config.ts' // if you are using custom path, default
+  },
+  modules: ['@nuxt/icon', '@nuxt/ui', '@nuxtjs/color-mode', '@nuxtjs/i18n']
 })

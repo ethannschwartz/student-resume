@@ -1,11 +1,11 @@
 <template>
   <nav class="hidden lg:block">
     <ul class="flex gap-4 items-center">
-      <li class="flex items-center">
-        <LanguageButton />
-      </li>
       <li v-for="link in navLinks" :key="link.name">
         <NavButton :link="link" :active-link="activeLink" />
+      </li>
+      <li class="flex items-center">
+        <LanguageButton />
       </li>
     </ul>
   </nav>

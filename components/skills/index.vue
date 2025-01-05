@@ -2,12 +2,12 @@
 <template>
   <section class="h-screen flex items-center justify-center bg-gray-50">
     <div class="max-w-3xl mx-auto p-4">
-      <h2 class="text-3xl font-semibold mb-6">Skills</h2>
+      <h2 class="text-3xl font-semibold mb-6">{{ $t('Skills') }}</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div v-for="section in skillSections">
-          <h3 class="text-xl font-bold mb-2">{{ section.title }}</h3>
+          <h3 class="text-xl font-bold mb-2">{{ $t(section.title) }}</h3>
           <ul class="list-disc list-inside">
-            <li v-for="item in section.items">{{ item }}</li>
+            <li v-for="item in section.items">{{ $t(item) }}</li>
           </ul>
         </div>
       </div>
