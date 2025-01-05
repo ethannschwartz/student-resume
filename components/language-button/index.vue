@@ -28,6 +28,13 @@ const updateLanguage = (language) => {
   localStorage.setItem('language', language);
 };
 
+onMounted(() => {
+  let languagePreference = localStorage.getItem('language');
+  if(languagePreference !== 'en') {
+    setLocale(languagePreference);
+  }
+})
+
 const languages = [
   {
     label: "English",
