@@ -1,9 +1,21 @@
 <template>
   <div>
-    <header class="fixed top-0 left-0 right-0 bg-transparent backdrop-blur p-6 flex justify-between gap-6">
+    <header class="z-50 fixed top-0 left-0 right-0 bg-transparent backdrop-blur p-6 flex justify-between gap-6">
       <h5>{{ $t('Oryan Malka Schwartz') }}</h5>
-      <Navbar :active-link="activeLink" />
+      <Navbar
+          :active-link="activeLink"
+          :is-mobile-nav-open="isMobileNavOpen"
+          @toggle="isMobileNavOpen=!isMobileNavOpen"
+      />
     </header>
+    <MobileNav
+        class="duration-150"
+        :class="{
+          'translate-x-full': !isMobileNavOpen,
+          'translate-x-0': isMobileNavOpen,
+        }"
+        :active-link="activeLink"
+    />
     <main :dir="locale === 'he' ? 'rtl' : 'ltr'" :class="locale !== 'he' ? '!text-left' : '!text-right'">
       <Summary id="Summary" />
       <Education id="Education" />
@@ -16,7 +28,8 @@
 
 <script setup>
 const activeLink = ref('');
-const sections = ref([]);
+const pageSections = ref([]);
+const isMobileNavOpen = ref(false);
 
 const { locale } = useI18n();
 
@@ -31,13 +44,13 @@ const updateActiveLink = (entries) => {
 let observer;
 
 onMounted(() => {
-  sections.value = Array.from(document.querySelectorAll('section'));
+  pageSections.value = Array.from(document.querySelectorAll('section'));
   observer = new IntersectionObserver(updateActiveLink, {
     root: null, // viewport
     threshold: 0.5, // 50% of the section is in view
   });
 
-  sections.value.forEach((section) => observer.observe(section));
+  pageSections.value.forEach((section) => observer.observe(section));
 
 });
 

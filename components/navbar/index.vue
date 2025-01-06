@@ -1,33 +1,29 @@
 <template>
-  <nav class="hidden lg:block">
-    <ul class="flex gap-4 items-center">
-      <li v-for="link in navLinks" :key="link.name">
-        <NavButton :link="link" :active-link="activeLink" />
-      </li>
-      <li class="flex items-center">
-        <LanguageButton />
-      </li>
-    </ul>
-  </nav>
-  <button @click="toggleMenu" class="z-50 block lg:hidden">
-    <i :class="isMenuOpen ? 'fi fi-rr-cross' : 'fi fi-rr-menu-burger'"></i>
-  </button>
+  <div>
+    <nav class="hidden lg:block">
+      <ul class="flex gap-4 items-center">
+        <li v-for="link in sections.navLinks" :key="link.name">
+          <NavButton :link="link" :active-link="activeLink" />
+        </li>
+        <li class="flex items-center">
+          <LanguageButton />
+        </li>
+      </ul>
+    </nav>
+    <BurgerToggle :is-menu-open="isMenuOpen" @toggle="toggleMenu" />
+  </div>
 </template>
 
 <script setup>
-defineProps(['activeLink']);
+import sections from "~/constants/sections.js";
 
-const navLinks = [
-  {path: '#Summary', name: 'Summary'},
-  {path: '#Education', name: 'Education'},
-  {path: '#Skills', name: 'Skills'},
-  {path: '#Experience', name: 'Experience'},
-  {path: '#Projects', name: 'Projects'},
-];
+defineProps(['activeLink']);
+const emits = defineEmits(['toggle']);
 
 const isMenuOpen = ref(false);
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
+  emits('toggle');
 };
 </script>
