@@ -10,20 +10,17 @@
         </li>
       </ul>
     </nav>
-    <BurgerToggle :is-menu-open="isMenuOpen" @toggle="toggleMenu" />
+    <BurgerToggle :is-menu-open="isMobileNavOpen" @toggle="toggleMenu" />
   </div>
 </template>
 
 <script setup>
 import sections from "~/constants/sections.js";
 
-defineProps(['activeLink']);
+defineProps(['activeLink','isMobileNavOpen']);
 const emits = defineEmits(['toggle']);
 
-const isMenuOpen = ref(false);
-
 const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value;
   emits('toggle');
 };
 </script>

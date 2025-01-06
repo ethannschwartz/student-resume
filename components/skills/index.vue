@@ -1,9 +1,9 @@
 <!-- components/skills/index.vue -->
 <template>
   <section class="h-screen flex items-center justify-center bg-gray-50">
-    <div class="max-w-3xl mx-auto p-4">
+    <div class="w-full max-w-3xl p-6">
       <h2 class="text-3xl font-semibold mb-6">{{ $t('Skills') }}</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="w-full block md:grid grid-cols-1 md:grid-cols-2 gap-6">
         <div v-for="section in skillSections">
           <h3 class="text-xl font-bold mb-2">{{ $t(section.title) }}</h3>
           <ul class="list-disc list-inside">

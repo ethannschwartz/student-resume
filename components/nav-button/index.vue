@@ -1,5 +1,6 @@
 <template>
   <a
+      @click="$emit('select')"
       :href="link.path"
       class="hover:text-black text-zinc-600 relative group"
       :class="{ '!text-black': activeLink === link.name }"
