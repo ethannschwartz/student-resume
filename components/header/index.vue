@@ -1,31 +1,28 @@
 <template>
-  <header class="z-10 fixed top-0 left-0 right-0 bg-white/50 backdrop-blur py-6 px-12 flex justify-between gap-6">
+  <header class="bg-white fixed top-6 left-16 right-16 z-20 rounded-2xl border border-zinc-100 shadow py-3 px-6 flex items-center justify-between gap-6">
     <div>
       <h5 class="font-extrabold">Oryan Malka-Schwartz</h5>
       <p class="text-xs type-secondary">052-880-9027</p>
     </div>
-    <ul class="flex items-center justify-end gap-4">
-      <li v-for="link in sections">
-        <a :href="link.href" class="duration-300">
-          <UTooltip :text="link.tooltip" :open-delay="1000">
-            <div class="w-fit relative">
-              {{link.name}}
-              <hr class="duration-200 border-black" :class="currentSection === link.href.substring(1) ? 'w-full opacity-100' : 'w-0 opacity-0'"/>
-            </div>
+    <div class="flex items-center gap-6">
+      <ul class="flex items-center justify-end gap-4">
+        <li v-for="link in sections" :key="link.href">
+          <UTooltip :text="link.tooltip" :delay-duration="0">
+            <a :href="link.href" class="duration-300">
+              <div class="w-fit relative">
+                {{link.name}}
+                <hr class="duration-200 border-black" :class="currentSection === link.href.substring(1) ? 'w-full opacity-100' : 'w-0 opacity-0'"/>
+              </div>
+            </a>
           </UTooltip>
-        </a>
-      </li>
-      <li>
-        <UDropdown
-            :items="languages"
-            mode="hover"
-            :popper="{ placement: 'bottom-end' }"
-            class="flex items-center"
-        >
-          <i class="fi fi-rr-globe flex items-center justify-center"></i>
-        </UDropdown>
-      </li>
-    </ul>
+        </li>
+      </ul>
+      <UDropdownMenu :items="languages" :content="{ side: 'bottom', align: 'start' }">
+        <UButton color="neutral" variant="ghost" trailing-icon="i-lucide-chevron-down">
+          {{ language === 'english' ? 'EN' : 'עב' }}
+        </UButton>
+      </UDropdownMenu>
+    </div>
   </header>
 </template>
 
@@ -37,19 +34,19 @@ const language = useState("language", () => "english")
 
 const languages = [
   [
-      {
-        label: 'English',
-        click: () => {
-          useState('language', () => "english")
-        }
-      },
-      {
-        label: 'עברית',
-        click: () => {
-          useState('language', () => "hebrew")
-        }
+    {
+      label: 'English',
+      onSelect: () => {
+        language.value = "english"
       }
-    ]
+    },
+    {
+      label: 'עברית',
+      onSelect: () => {
+        language.value = "hebrew"
+      }
+    }
+  ]
 ];
 
 const sections = [

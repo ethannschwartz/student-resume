@@ -18,14 +18,19 @@
         <Projects />
       </section>
     </main>
-    <footer class="fixed bottom-0 left-0 right-0 px-12 py-6">
-      <ul class="flex items-center justify-start gap-4">
-        <li v-for="link in headerLinks">
-          <a :href="link.href">
-            <UTooltip :text="link.tooltip">
-              <i :class="link.icon" class="text-black"></i>
-            </UTooltip>
-          </a>
+    <footer class="fixed bottom-0 left-0 right-0 px-12 py-6 bg-white/80 backdrop-blur-sm border-t border-gray-200 z-20">
+      <ul class="flex items-center justify-start gap-6">
+        <li v-for="link in headerLinks" :key="link.name">
+          <UTooltip :text="link.tooltip" :delay-duration="0">
+            <UButton
+              :to="link.href"
+              :icon="link.icon"
+              color="neutral"
+              variant="ghost"
+              target="_blank"
+              class="hover:scale-110 transition-transform duration-200"
+            />
+          </UTooltip>
         </li>
       </ul>
     </footer>
@@ -36,7 +41,6 @@
 definePageMeta({
   colorMode: 'light',
 });
-const { locale, setLocale } = useI18n()
 
 const currentSection = ref('summary');
 
@@ -63,7 +67,7 @@ onMounted(() => {
     observer.observe(section);
   });
 
-  onUnmounted(() => {
+  onBeforeUnmount(() => {
     sections.forEach((section) => {
       observer.unobserve(section);
     });
@@ -73,15 +77,21 @@ onMounted(() => {
 const headerLinks = [
   {
     name: "email",
-    icon: "fi fi-rr-envelope",
+    icon: "i-lucide-mail",
     tooltip: "Email me",
-    href: "mailto:orianmalkao@gmail.com",
+    href: "mailto:Oryanschwartz@gmail.com",
+  },
+  {
+    name: "whatsapp",
+    icon: "i-lucide-message-circle",
+    tooltip: "WhatsApp",
+    href: "https://wa.me/972528809027",
   },
   {
     name: "phone",
-    icon: "fi fi-brands-whatsapp",
-    tooltip: "Whatsapp",
-    href: "mailto:orianmalkao@gmail.com",
+    icon: "i-lucide-phone",
+    tooltip: "Call me",
+    href: "tel:+972528809027",
   },
 ];
 </script>
