@@ -14,7 +14,7 @@
         <!-- Left: Text Content -->
         <div class="space-y-6">
           <div data-aos="fade-right" :data-aos-delay="100">
-            <span class="text-sm font-semibold tracking-wider text-gray-600 uppercase">Practical Engineer</span>
+            <span class="text-sm font-semibold tracking-wider text-gray-600 uppercase">{{ $t('summary.title') }}</span>
           </div>
 
           <h1 data-aos="fade-right" :data-aos-delay="200" class="text-5xl md:text-6xl font-bold leading-tight">
@@ -23,18 +23,18 @@
           </h1>
 
           <p data-aos="fade-right" :data-aos-delay="300" class="text-xl text-gray-700 leading-relaxed">
-            Architectural Engineering graduate with a passion for translating creative ideas into detailed and precise execution plans.
+            {{ $t('summary.description') }}
           </p>
 
           <div data-aos="fade-right" :data-aos-delay="400" class="pt-4 space-y-3">
             <div class="flex items-center gap-3">
               <UIcon name="i-lucide-map-pin" class="fi fi-rr-marker text-gray-600"></UIcon>
-              <span class="text-gray-700">Tel Aviv-Yafo, Israel</span>
+              <span class="text-gray-700">{{ $t('summary.location') }}</span>
             </div>
             <div class="flex items-center gap-3">
               <UIcon name="i-lucide-mail" class="fi fi-rr-envelope text-gray-600"></UIcon>
-              <a href="mailto:Oryanschwartz@gmail.com" class="text-gray-700 hover:text-gray-900 transition-colors">
-                Oryanschwartz@gmail.com
+              <a href="mailto:oryanschwartz@gmail.com" class="text-gray-700 hover:text-gray-900 transition-colors">
+                oryanschwartz@gmail.com
               </a>
             </div>
             <div class="flex items-center gap-3">
@@ -50,7 +50,7 @@
               href="/#portfolio"
               class="group inline-flex items-center gap-2 px-8 py-3 bg-gray-900 text-white rounded-none hover:bg-gray-800 transition-all duration-300 font-medium"
             >
-              View Portfolio
+              {{ $t('summary.viewPortfolio') }}
               <UIcon name="i-lucide-arrow-down" class="duration-200 -translate-y-0 group-hover:translate-y-px" />
             </a>
           </div>

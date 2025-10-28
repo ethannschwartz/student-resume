@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "aboutMe": "About me",
+    "aboutMeTooltip": "Learn about my journey and passion for architecture.",
+    "education": "Education",
+    "educationTooltip": "See my academic background and architectural studies.",
+    "skills": "Skills",
+    "skillsTooltip": "Explore my architectural and technical skills.",
+    "experience": "Experience",
+    "experienceTooltip": "Review my professional experiences in architecture.",
+    "portfolio": "Portfolio",
+    "portfolioTooltip": "Browse my academic and personal architectural portfolio.",
+    "contact": "Contact",
+    "contactTooltip": "Let's get in touch."
+  },
+  "footer": {
+    "emailTooltip": "Email me",
+    "whatsappTooltip": "WhatsApp",
+    "phoneTooltip": "Call me"
+  },
+  "summary": {
+    "title": "Practical Engineer",
+    "description": "Architectural Engineering graduate with a passion for translating creative ideas into detailed and precise execution plans.",
+    "location": "Tel Aviv-Yafo, Israel",
+    "viewPortfolio": "View Portfolio"
+  },
+  "education": {
+    "title": "Education",
+    "degree": "Practical Engineer in Architecture",
+    "school": "Shenkar - Engineering. Design. Art.",
+    "location": "Tel Aviv, Israel",
+    "graduated": "Graduated: 2025",
+    "coreCurriculum": "Core Curriculum:",
+    "softwareProficiency": "Software Proficiency:",
+    "courses": {
+      "architecturalDesign": "Architectural Design Studio",
+      "buildingSystems": "Building Systems Design",
+      "urbanDesign": "Urban Design Fundamentals",
+      "projectPlanning": "Project Planning",
+      "constructionTheory": "Construction Theory",
+      "lightingDesign": "Lighting Design",
+      "buildingCodes": "Building Codes & Regulations",
+      "spaceOrganization": "Space Organization",
+      "constructionControl": "Construction Control & Management",
+      "landscape": "Landscape Architecture",
+      "ergonomics": "Ergonomics",
+      "climateDesign": "Climate-Responsive Design",
+      "plumbing": "Plumbing & Installations"
+    }
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "categories": {
+      "designSoftware": {
+        "title": "Design Software",
+        "skills": {
+          "revit": "Revit - Advanced",
+          "autocad": "AutoCAD - Advanced",
+          "sketchup": "SketchUp - Advanced",
+          "enscape": "Enscape - Proficient"
+        }
+      },
+      "technicalKnowledge": {
+        "title": "Technical Knowledge",
+        "skills": {
+          "buildingCodes": "Building Codes & Regulations",
+          "lightingDesign": "Lighting Design",
+          "constructionMgmt": "Construction Management",
+          "environmentalDesign": "Environmental Design",
+          "installationSystems": "Installation Systems"
+        }
+      },
+      "professionalSkills": {
+        "title": "Professional Skills",
+        "skills": {
+          "teamCollaboration": "Team Collaboration",
+          "precision": "Precision & Detail-Oriented",
+          "creativeThinking": "Creative Thinking",
+          "clientCommunication": "Client Communication",
+          "timeManagement": "Time Management"
+        }
+      }
+    },
+    "languages": {
+      "title": "Languages",
+      "hebrew": "Hebrew",
+      "english": "English",
+      "native": "Native",
+      "fluent": "Fluent"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Selected architectural projects demonstrating design thinking, technical proficiency, and attention to detail.",
+    "project1": {
+      "type": "Final Project",
+      "title": "Two-Story Residential Building",
+      "description": "Designed a comprehensive two-story residential building for mixed-use purposes, emphasizing sustainable materials, efficient space distribution, and optimization of building rights.",
+      "highlights": {
+        "h1": "Maximized building rights while ensuring optimal layout",
+        "h2": "Strategic positioning of public/private spaces based on sun orientation and facades",
+        "h3": "Focus on sustainable materials and energy efficiency",
+        "h4": "Comprehensive plans, sections, and 3D visualizations using Revit and AutoCAD"
+      },
+      "note": "Presented to a professional review committee and received commendations for clarity of planning and presentation."
+    },
+    "project2": {
+      "type": "Studio Project - Tel Aviv",
+      "title": "Urban Renewal Design",
+      "downloadButton": "Download Floor Plan",
+      "description": "Developed a concept for rehabilitating an existing neighborhood with the goal of improving accessibility and creating connections between public spaces.",
+      "highlights": {
+        "h1": "Enhanced pedestrian accessibility and urban connectivity",
+        "h2": "Integration of public spaces and community areas",
+        "h3": "3D models and presentation boards illustrating spatial organization",
+        "h4": "Climate-responsive design principles"
+      }
+    },
+    "project3": {
+      "type": "Independent Work",
+      "title": "Small Apartment Redesign Projects",
+      "description": "Collaborated with an interior designer to transform compact living spaces through innovative design solutions and efficient space planning.",
+      "highlights": {
+        "h1": "Precise AutoCAD and Revit drawings based on client requirements",
+        "h2": "Direct client communication and iterative design refinement",
+        "h3": "Coordination with contractors for accurate implementation"
+      }
+    },
+    "note": "Additional projects and detailed drawings available upon request"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "email": "Your Email",
+    "emailRequired": "*",
+    "message": "Message (Optional)",
+    "messagePlaceholder": "Message",
+    "sendButton": "Send Message",
+    "sending": "Sending...",
+    "successMessage": "Thank you! Your message has been sent successfully.",
+    "errorMessage": "Oops! There was a problem sending your message.",
+    "networkError": "Network error. Please try again later."
+  }
+}

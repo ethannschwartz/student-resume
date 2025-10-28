@@ -1,5 +1,10 @@
 <template>
-  <UHeader class="fixed top-0 left-0 right-0" menu="test" mode="slideover">
+  <UHeader class="fixed top-0 left-0 right-0" :menu="true" mode="slideover">
+    <template #body>
+      <div>
+        <NavMenu />
+      </div>
+    </template>
     <template #left>
       <div>
         <h5 class="font-bold">Oryan Malka-Schwartz</h5>
@@ -20,7 +25,7 @@
             </UTooltip>
           </li>
         </ul>
-        <UDropdownMenu :items="languages" :content="{ side: 'bottom', align: 'end' }">
+        <UDropdownMenu :items="languages" :content="{ side: 'bottom', align: 'end' }" @update:open="(isOpen) => isOpen && updateLanguageMenu()">
           <UButton color="neutral" variant="ghost" trailing-icon="i-lucide-globe" />
         </UDropdownMenu>
       </div>
@@ -29,51 +34,76 @@
 </template>
 
 <script setup>
+const { locale, locales, setLocale, t } = useI18n();
 
 defineProps(['currentSection']);
 
-const languages = ref([
-  {
-    label: 'English',
-    value: 'en',
-  },
-  {
-    label: 'עברית',
-    value: 'he',
-  }
+// Create language menu items with click handlers
+const languages = computed(() => [
+  [
+    {
+      label: 'English',
+      value: 'en',
+      icon: locale.value === 'en' ? 'i-lucide-check' : undefined,
+      onClick: () => switchLanguage('en')
+    },
+    {
+      label: 'עברית',
+      value: 'he',
+      icon: locale.value === 'he' ? 'i-lucide-check' : undefined,
+      onClick: () => switchLanguage('he')
+    }
+  ]
 ])
 
-const sections = [
+// Function to switch language
+const switchLanguage = async (newLocale) => {
+  await setLocale(newLocale);
+  // Force update the body direction for RTL/LTR
+  document.documentElement.dir = newLocale === 'he' ? 'rtl' : 'ltr';
+}
+
+// Update language menu when opened
+const updateLanguageMenu = () => {
+  // This will trigger the computed property to update
+}
+
+const sections = computed(() => [
   {
-    name: 'About me',
+    name: t('nav.aboutMe'),
     href: '#summary',
-    tooltip: "Learn about my journey and passion for architecture.",
+    tooltip: t('nav.aboutMeTooltip'),
   },
   {
-    name: 'Education',
+    name: t('nav.education'),
     href: '#education',
-    tooltip: "See my academic background and architectural studies.",
+    tooltip: t('nav.educationTooltip'),
   },
   {
-    name: 'Skills',
+    name: t('nav.skills'),
     href: '#skills',
-    tooltip: "Explore my architectural and technical skills.",
+    tooltip: t('nav.skillsTooltip'),
   },
   // {
-  //   name: 'Experience',
+  //   name: t('nav.experience'),
   //   href: '#experience',
-  //   tooltip: "Review my professional experiences in architecture.",
+  //   tooltip: t('nav.experienceTooltip'),
   // },
   {
-    name: 'Portfolio',
+    name: t('nav.portfolio'),
     href: '#portfolio',
-    tooltip: "Browse my academic and personal architectural portfolio.",
+    tooltip: t('nav.portfolioTooltip'),
   },
   {
-    name: 'Contact',
+    name: t('nav.contact'),
     href: '#contact',
-    tooltip: "Let's get in touch.",
+    tooltip: t('nav.contactTooltip'),
   },
-];
+]);
+
+// Set initial direction based on locale
+onMounted(() => {
+  document.documentElement.dir = locale.value === 'he' ? 'rtl' : 'ltr';
+})
 
 </script>

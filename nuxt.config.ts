@@ -36,5 +36,20 @@ export default defineNuxtConfig({
       external: ['node:inspector']
     }
   },
-  modules: ["@nuxt/ui", "@nuxtjs/sitemap"],
+  modules: ["@nuxt/ui", "@nuxtjs/sitemap", '@nuxtjs/i18n'],
+  i18n: {
+    lazy: true,
+    langDir: 'locales',
+    locales: [
+      { code: 'en', language: 'en-US', name: 'English', dir: 'ltr', file: 'en.json' },
+      { code: 'he', language: 'he-IL', name: 'עברית', dir: 'rtl', file: 'he.json' }
+    ],
+    defaultLocale: 'en',
+    strategy: 'no_prefix',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    }
+  }
 })

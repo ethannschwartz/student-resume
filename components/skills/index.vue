@@ -10,7 +10,7 @@
 
     <div class="max-w-6xl mx-auto w-full relative z-10">
       <div class="text-center mb-16">
-        <h2 data-aos="fade-up" class="text-5xl font-bold text-white mb-4">Skills & Expertise</h2>
+        <h2 data-aos="fade-up" class="text-5xl font-bold text-white mb-4">{{ $t('skills.title') }}</h2>
         <div data-aos="fade-up" :data-aos-delay="100" class="w-20 h-1 bg-white mx-auto"></div>
       </div>
 
@@ -22,16 +22,16 @@
              class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 hover:bg-white/10 transition-all duration-300 group">
           <div class="mb-6">
             <i :class="category.icon" class="text-4xl text-white mb-4"></i>
-            <h3 class="text-2xl font-bold text-white mb-2">{{ category.title }}</h3>
+            <h3 class="text-2xl font-bold text-white mb-2">{{ $t(`skills.categories.${category.key}.title`) }}</h3>
             <div class="w-12 h-1 bg-white/50 group-hover:w-20 transition-all duration-300"></div>
           </div>
 
           <ul class="space-y-3">
-            <li v-for="(skill, idx) in category.skills"
+            <li v-for="(skillKey, idx) in category.skillKeys"
                 :key="idx"
                 class="flex items-start gap-3 text-gray-300">
               <i class="fi fi-rr-check text-white text-sm mt-1"></i>
-              <span>{{ skill }}</span>
+              <span>{{ $t(`skills.categories.${category.key}.skills.${skillKey}`) }}</span>
             </li>
           </ul>
         </div>
@@ -39,21 +39,21 @@
 
       <!-- Languages Section -->
       <div data-aos="fade-up" :data-aos-delay="500" class="mt-16 text-center">
-        <h3 class="text-2xl font-bold text-white mb-6">Languages</h3>
+        <h3 class="text-2xl font-bold text-white mb-6">{{ $t('skills.languages.title') }}</h3>
         <div class="flex justify-center gap-8">
           <div class="text-center">
             <div class="w-24 h-24 rounded-full bg-white/10 border-4 border-white flex items-center justify-center mb-3">
               <span class="text-2xl font-bold text-white">HE</span>
             </div>
-            <p class="text-white font-medium">Hebrew</p>
-            <p class="text-gray-400 text-sm">Native</p>
+            <p class="text-white font-medium">{{ $t('skills.languages.hebrew') }}</p>
+            <p class="text-gray-400 text-sm">{{ $t('skills.languages.native') }}</p>
           </div>
           <div class="text-center">
             <div class="w-24 h-24 rounded-full bg-white/10 border-4 border-white flex items-center justify-center mb-3">
               <span class="text-2xl font-bold text-white">EN</span>
             </div>
-            <p class="text-white font-medium">English</p>
-            <p class="text-gray-400 text-sm">Fluent</p>
+            <p class="text-white font-medium">{{ $t('skills.languages.english') }}</p>
+            <p class="text-gray-400 text-sm">{{ $t('skills.languages.fluent') }}</p>
           </div>
         </div>
       </div>
@@ -64,36 +64,19 @@
 <script setup>
 const skillCategories = [
   {
-    title: 'Design Software',
+    key: 'designSoftware',
     icon: 'fi fi-rr-computer',
-    skills: [
-      'Revit - Advanced',
-      'AutoCAD - Advanced',
-      'SketchUp - Advanced',
-      'Enscape - Proficient'
-    ],
+    skillKeys: ['revit', 'autocad', 'sketchup', 'enscape'],
   },
   {
-    title: 'Technical Knowledge',
+    key: 'technicalKnowledge',
     icon: 'fi fi-rr-drafting-compass',
-    skills: [
-      'Building Codes & Regulations',
-      'Lighting Design',
-      'Construction Management',
-      'Environmental Design',
-      'Installation Systems'
-    ],
+    skillKeys: ['buildingCodes', 'lightingDesign', 'constructionMgmt', 'environmentalDesign', 'installationSystems'],
   },
   {
-    title: 'Professional Skills',
+    key: 'professionalSkills',
     icon: 'fi fi-rr-users',
-    skills: [
-      'Team Collaboration',
-      'Precision & Detail-Oriented',
-      'Creative Thinking',
-      'Client Communication',
-      'Time Management'
-    ],
+    skillKeys: ['teamCollaboration', 'precision', 'creativeThinking', 'clientCommunication', 'timeManagement'],
   },
 ];
 </script>

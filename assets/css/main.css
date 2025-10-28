@@ -4,7 +4,7 @@
 
 /* customs global styling */
 :root {
-    --ui-radius: 0.25rem;
+    --ui-radius: 0rem;
     scroll-behavior: smooth;
 }
 

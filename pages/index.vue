@@ -40,6 +40,10 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  title: 'Oryan Malka-Schwartz | Practical Engineer',
+})
+
 definePageMeta({
   colorMode: 'light',
 });
@@ -102,24 +106,26 @@ onMounted(() => {
   });
 });
 
-const headerLinks = [
+const { t } = useI18n();
+
+const headerLinks = computed(() => [
   {
     name: "email",
     icon: "i-lucide-mail",
-    tooltip: "Email me",
-    href: "mailto:Oryanschwartz@gmail.com",
+    tooltip: t('footer.emailTooltip'),
+    href: "mailto:oryanschwartz@gmail.com",
   },
   {
     name: "whatsapp",
     icon: "i-lucide-message-circle",
-    tooltip: "WhatsApp",
+    tooltip: t('footer.whatsappTooltip'),
     href: "https://wa.me/972528809027",
   },
   {
     name: "phone",
     icon: "i-lucide-phone",
-    tooltip: "Call me",
+    tooltip: t('footer.phoneTooltip'),
     href: "tel:+972528809027",
   },
-];
+]);
 </script>
