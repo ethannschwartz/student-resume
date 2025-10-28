@@ -69,8 +69,13 @@
         <div data-aos="fade-up" class="grid md:grid-cols-2 gap-12 items-center">
           <div class="relative">
             <div>
-              <UCarousel auto-height arrows v-slot="{ item }" :items="studioProjectImages" autoplay loop>
-                <img :src="item" :alt="`studio-project-img-${item}`" />
+              <UCarousel arrows v-slot="{ item }" :items="studioProjectImages" autoplay loop>
+                <div class="relative">
+                  <img :src="item" :alt="`studio-project-img-${item}`" />
+                  <button @click="openImagesModal(item, studioProjectImages, 'Urban Renewal Design')" class="opacity-0 hover:opacity-100 hover:bg-zinc-800/50 z-50 inset-0 absolute">
+                    <UIcon name="i-lucide-zoom-in" class="text-white text-4xl" />
+                  </button>
+                </div>
               </UCarousel>
             </div>
             <div class="absolute -top-6 -right-6 w-32 h-32 bg-gray-900 -z-10"></div>
@@ -79,7 +84,18 @@
           <div class="space-y-6">
             <div>
               <span class="text-sm font-semibold tracking-wider text-gray-500 uppercase">Studio Project - Tel Aviv</span>
-              <h3 class="text-3xl font-bold mt-2 mb-4">Urban Renewal Design</h3>
+                <h3 class="text-3xl font-bold mt-2 mb-2 ">Urban Renewal Design</h3>
+                <UButton
+                    color="neutral"
+                    class="mb-4"
+                    icon="i-lucide-download"
+                    size="sm"
+                    variant="solid"
+                    :loading="isDownloading"
+                    @click="downloadPDF(studioFloorPlanPDF, 'Oryan-Malka-Schwartz-Studio-Floor-Plan.pdf')"
+                >
+                  Download Floor Plan
+                </UButton>
               <p class="text-gray-700 leading-relaxed">
                 Developed a concept for rehabilitating an existing neighborhood with the goal of improving accessibility and creating connections between public spaces.
               </p>
@@ -167,30 +183,62 @@
       </div>
 
       <!-- Portfolio Note -->
-      <div data-aos="fade-up" class="my-20 text-center">
+      <div data-aos="fade-up" class="mt-20 text-center">
         <p class="text-gray-600 mb-6">Additional projects and detailed drawings available upon request</p>
-        <a href="mailto:Oryanschwartz@gmail.com"
-           class="inline-flex items-center gap-2 px-8 py-3 bg-gray-900 text-white hover:bg-gray-800 transition-all duration-300 font-medium">
-          Request Full Portfolio
-          <i class="fi fi-rr-arrow-right"></i>
-        </a>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
+import { ImageGalleryDialog } from '#components';
 import studioProject1 from '@/assets/images/studio-project-1.png';
 import studioProject2 from '@/assets/images/studio-project-2.png';
 import studioProject3 from '@/assets/images/studio-project-3.png';
 import studioProject4 from '@/assets/images/studio-project-4.png';
 import studioProject5 from '@/assets/images/studio-project-5.png';
+import studioFloorPlanPDF from '@/assets/images/studio-floor-plan.pdf';
+import studioFloorPlanPng from '@/assets/images/studio-floor-plan.png';
 
 const studioProjectImages = [
     studioProject1,
     studioProject2,
     studioProject3,
     studioProject4,
-    studioProject5,
+  studioFloorPlanPng,
+  studioProject5,
 ];
+
+const isDownloading = ref(false);
+
+const downloadPDF = (pdfFile, fileName = 'oryan-malka-schwartz-project.pdf') => {
+  isDownloading.value = true;
+
+  setTimeout(() => {
+    isDownloading.value = false;
+  }, 600)
+  // Create a temporary anchor element to trigger download
+  const link = document.createElement('a');
+  link.href = String(pdfFile);
+  link.download = fileName;
+  link.target = '_blank';
+
+  // Append to body, click, and remove
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+const overlay = useOverlay();
+
+const openImagesModal = (image, images, title) => {
+  const modal = overlay.create(ImageGalleryDialog, {
+    props: {
+      title: title,
+      image: image,
+      images: images,
+    },
+  });
+  modal.open();
+}
 </script>

@@ -17,6 +17,9 @@
       <section id="portfolio" class="min-h-screen">
         <Portfolio />
       </section>
+      <section id="contact" class="h-full">
+        <Contact />
+      </section>
     </main>
     <footer class="fixed bottom-0 left-0 right-0 px-12 py-6 bg-white/80 backdrop-blur-sm border-t border-gray-200 z-20">
       <ul class="flex items-center justify-end gap-2">

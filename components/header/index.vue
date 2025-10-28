@@ -69,6 +69,11 @@ const sections = [
     href: '#portfolio',
     tooltip: "Browse my academic and personal architectural portfolio.",
   },
+  {
+    name: 'Contact',
+    href: '#contact',
+    tooltip: "Let's get in touch.",
+  },
 ];
 
 </script>

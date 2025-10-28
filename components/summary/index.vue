@@ -28,17 +28,17 @@
 
           <div data-aos="fade-right" :data-aos-delay="400" class="pt-4 space-y-3">
             <div class="flex items-center gap-3">
-              <i class="fi fi-rr-marker text-gray-600"></i>
+              <UIcon name="i-lucide-map-pin" class="fi fi-rr-marker text-gray-600"></UIcon>
               <span class="text-gray-700">Tel Aviv-Yafo, Israel</span>
             </div>
             <div class="flex items-center gap-3">
-              <i class="fi fi-rr-envelope text-gray-600"></i>
+              <UIcon name="i-lucide-mail" class="fi fi-rr-envelope text-gray-600"></UIcon>
               <a href="mailto:Oryanschwartz@gmail.com" class="text-gray-700 hover:text-gray-900 transition-colors">
                 Oryanschwartz@gmail.com
               </a>
             </div>
             <div class="flex items-center gap-3">
-              <i class="fi fi-brands-whatsapp text-gray-600"></i>
+              <UIcon name="i-lucide-phone" class="fi fi-brands-whatsapp text-gray-600"></UIcon>
               <a href="https://wa.me/972528809027" class="text-gray-700 hover:text-gray-900 transition-colors">
                 052-880-9027
               </a>
@@ -47,11 +47,11 @@
 
           <div data-aos="fade-right" :data-aos-delay="500" class="pt-6">
             <a
-              href="#projects"
-              class="inline-flex items-center gap-2 px-8 py-3 bg-gray-900 text-white rounded-none hover:bg-gray-800 transition-all duration-300 font-medium"
+              href="/#portfolio"
+              class="group inline-flex items-center gap-2 px-8 py-3 bg-gray-900 text-white rounded-none hover:bg-gray-800 transition-all duration-300 font-medium"
             >
               View Portfolio
-              <i class="fi fi-rr-arrow-right"></i>
+              <UIcon name="i-lucide-arrow-down" class="duration-200 -translate-y-0 group-hover:translate-y-px" />
             </a>
           </div>
         </div>
