@@ -15,14 +15,12 @@
       <div class="flex items-center gap-6">
         <ul class="hidden lg:flex items-center justify-end gap-4">
           <li v-for="link in sections" :key="link.href">
-            <UTooltip :text="link.tooltip" :delay-duration="1000">
-              <a :href="link.href" class="duration-300">
-                <div class="w-fit relative">
-                  {{link.name}}
-                  <hr class="duration-200 border border-gray-500" :class="currentSection === link.href.substring(1) ? 'w-full opacity-100' : 'w-0 opacity-0'"/>
-                </div>
-              </a>
-            </UTooltip>
+            <a :href="link.href" class="duration-300">
+              <div class="w-fit relative">
+                {{link.name}}
+                <hr class="duration-200 border border-gray-500" :class="currentSection === link.href.substring(1) ? 'w-full opacity-100' : 'w-0 opacity-0'"/>
+              </div>
+            </a>
           </li>
         </ul>
         <UDropdownMenu :items="languages" :content="{ side: 'bottom', align: 'end' }" @update:open="(isOpen) => isOpen && updateLanguageMenu()">
@@ -72,32 +70,26 @@ const sections = computed(() => [
   {
     name: t('nav.aboutMe'),
     href: '#summary',
-    tooltip: t('nav.aboutMeTooltip'),
   },
   {
     name: t('nav.education'),
     href: '#education',
-    tooltip: t('nav.educationTooltip'),
   },
   {
     name: t('nav.skills'),
     href: '#skills',
-    tooltip: t('nav.skillsTooltip'),
   },
   // {
   //   name: t('nav.experience'),
   //   href: '#experience',
-  //   tooltip: t('nav.experienceTooltip'),
   // },
   {
     name: t('nav.portfolio'),
     href: '#portfolio',
-    tooltip: t('nav.portfolioTooltip'),
   },
   {
     name: t('nav.contact'),
     href: '#contact',
-    tooltip: t('nav.contactTooltip'),
   },
 ]);
 
