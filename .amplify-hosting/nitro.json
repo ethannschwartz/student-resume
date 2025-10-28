@@ -1,0 +1,15 @@
+{
+  "date": "2025-10-28T11:07:05.784Z",
+  "preset": "aws-amplify",
+  "framework": {
+    "name": "nuxt",
+    "version": "4.2.0"
+  },
+  "versions": {
+    "nitro": "2.12.7"
+  },
+  "commands": {
+    "preview": "node compute/default/server.js"
+  },
+  "config": {}
+}

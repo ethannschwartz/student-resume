@@ -26,12 +26,13 @@ export default defineNuxtConfig({
     classSuffix: '',
     storageKey: 'nuxt-color-mode'
   },
+  ssr: true,
   nitro: {
     experimental: {
       wasm: true
     },
-    preset: 'node',
-    minify: false, // Disable minification for better debugging
+    preset: 'aws-amplify',
+    minify: true,
     rollupConfig: {
       external: ['node:inspector']
     }
