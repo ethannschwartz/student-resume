@@ -59,11 +59,11 @@ const sections = [
     href: '#skills',
     tooltip: "Explore my architectural and technical skills.",
   },
-  {
-    name: 'Experience',
-    href: '#experience',
-    tooltip: "Review my professional experiences in architecture.",
-  },
+  // {
+  //   name: 'Experience',
+  //   href: '#experience',
+  //   tooltip: "Review my professional experiences in architecture.",
+  // },
   {
     name: 'Portfolio',
     href: '#portfolio',

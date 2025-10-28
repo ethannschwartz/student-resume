@@ -11,9 +11,9 @@
       <section id="skills" class="min-h-screen">
         <Skills />
       </section>
-      <section id="experience" class="min-h-screen">
-        <Exprience />
-      </section>
+<!--      <section id="experience" class="min-h-screen">-->
+<!--        <Exprience />-->
+<!--      </section>-->
       <section id="portfolio" class="min-h-screen">
         <Portfolio />
       </section>
