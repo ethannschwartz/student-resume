@@ -14,7 +14,7 @@
               <a :href="link.href" class="duration-300">
                 <div class="w-fit relative">
                   {{link.name}}
-                  <hr class="duration-200 border-black" :class="currentSection === link.href.substring(1) ? 'w-full opacity-100' : 'w-0 opacity-0'"/>
+                  <hr class="duration-200 border border-gray-500" :class="currentSection === link.href.substring(1) ? 'w-full opacity-100' : 'w-0 opacity-0'"/>
                 </div>
               </a>
             </UTooltip>
