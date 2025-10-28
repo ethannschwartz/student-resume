@@ -15,11 +15,8 @@
 
           <!-- Placeholder image for educational institution -->
           <div data-aos="fade-right" :data-aos-delay="200" class="relative">
-            <div class="bg-gray-200 h-80 flex items-center justify-center">
-              <div class="text-center space-y-4">
-                <i class="fi fi-rr-graduation-cap text-6xl text-gray-400"></i>
-                <p class="text-sm text-gray-500">Shenkar Campus</p>
-              </div>
+            <div class="h-80 flex items-center justify-center">
+              <img :src="schoolImage" alt="" class="h-full" />
             </div>
             <div class="absolute -bottom-6 -right-6 w-32 h-32 border-4 border-gray-900 -z-10"></div>
           </div>
@@ -68,6 +65,7 @@
 </template>
 
 <script setup>
+import schoolImage from "~/assets/images/Shenkar College of Engineering and Design.svg";
 const courses = [
   'Architectural Design Studio',
   'Building Systems Design',

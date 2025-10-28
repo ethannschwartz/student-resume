@@ -1,53 +1,47 @@
 <template>
-  <header class="bg-white fixed top-6 left-16 right-16 z-20 rounded-2xl border border-zinc-100 shadow py-3 px-6 flex items-center justify-between gap-6">
-    <div>
-      <h5 class="font-extrabold">Oryan Malka-Schwartz</h5>
-      <p class="text-xs type-secondary">052-880-9027</p>
-    </div>
-    <div class="flex items-center gap-6">
-      <ul class="flex items-center justify-end gap-4">
-        <li v-for="link in sections" :key="link.href">
-          <UTooltip :text="link.tooltip" :delay-duration="0">
-            <a :href="link.href" class="duration-300">
-              <div class="w-fit relative">
-                {{link.name}}
-                <hr class="duration-200 border-black" :class="currentSection === link.href.substring(1) ? 'w-full opacity-100' : 'w-0 opacity-0'"/>
-              </div>
-            </a>
-          </UTooltip>
-        </li>
-      </ul>
-      <UDropdownMenu :items="languages" :content="{ side: 'bottom', align: 'start' }">
-        <UButton color="neutral" variant="ghost" trailing-icon="i-lucide-chevron-down">
-          {{ language === 'english' ? 'EN' : 'עב' }}
-        </UButton>
-      </UDropdownMenu>
-    </div>
-  </header>
+  <UHeader class="fixed top-0 left-0 right-0" menu="test" mode="slideover">
+    <template #left>
+      <div>
+        <h5 class="font-bold">Oryan Malka-Schwartz</h5>
+        <p class="text-xs type-secondary">052-880-9027</p>
+      </div>
+    </template>
+    <template #right>
+      <div class="flex items-center gap-6">
+        <ul class="hidden lg:flex items-center justify-end gap-4">
+          <li v-for="link in sections" :key="link.href">
+            <UTooltip :text="link.tooltip" :delay-duration="1000">
+              <a :href="link.href" class="duration-300">
+                <div class="w-fit relative">
+                  {{link.name}}
+                  <hr class="duration-200 border-black" :class="currentSection === link.href.substring(1) ? 'w-full opacity-100' : 'w-0 opacity-0'"/>
+                </div>
+              </a>
+            </UTooltip>
+          </li>
+        </ul>
+        <UDropdownMenu :items="languages" :content="{ side: 'bottom', align: 'end' }">
+          <UButton color="neutral" variant="ghost" trailing-icon="i-lucide-globe" />
+        </UDropdownMenu>
+      </div>
+    </template>
+  </UHeader>
 </template>
 
 <script setup>
 
 defineProps(['currentSection']);
 
-const language = useState("language", () => "english")
-
-const languages = [
-  [
-    {
-      label: 'English',
-      onSelect: () => {
-        language.value = "english"
-      }
-    },
-    {
-      label: 'עברית',
-      onSelect: () => {
-        language.value = "hebrew"
-      }
-    }
-  ]
-];
+const languages = ref([
+  {
+    label: 'English',
+    value: 'en',
+  },
+  {
+    label: 'עברית',
+    value: 'he',
+  }
+])
 
 const sections = [
   {
@@ -71,9 +65,9 @@ const sections = [
     tooltip: "Review my professional experiences in architecture.",
   },
   {
-    name: 'Projects',
-    href: '#projects',
-    tooltip: "Browse my academic and personal architectural projects.",
+    name: 'Portfolio',
+    href: '#portfolio',
+    tooltip: "Browse my academic and personal architectural portfolio.",
   },
 ];
 

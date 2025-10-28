@@ -1,4 +1,4 @@
-<!-- components/projects/index.vue -->
+<!-- components/portfolio/index.vue -->
 <template>
   <section class="min-h-screen bg-white py-20 px-6">
     <div class="max-w-6xl mx-auto">

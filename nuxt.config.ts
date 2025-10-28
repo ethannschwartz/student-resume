@@ -26,9 +26,6 @@ export default defineNuxtConfig({
     classSuffix: '',
     storageKey: 'nuxt-color-mode'
   },
-  i18n: {
-    vueI18n: './i18n.config.ts' // if you are using custom path, default
-  },
   nitro: {
     experimental: {
       wasm: true
@@ -39,12 +36,5 @@ export default defineNuxtConfig({
       external: ['node:inspector']
     }
   },
-  modules: [
-    "@nuxt/ui",
-    "nuxt-aos",
-    "vue3-carousel-nuxt",
-    "@nuxtjs/sitemap",
-    "@nuxt/image",
-    "@nuxtjs/i18n",
-  ],
+  modules: ["@nuxt/ui", "@nuxtjs/sitemap"],
 })

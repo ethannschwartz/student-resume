@@ -1,6 +1,6 @@
 # Nuxt Template App
 
-Welcome to my Nuxt Template App! This project is a template for creating applications using Nuxt 3, TailwindCSS, NuxtUI, Sitemap.xml, Animate on Scroll (AOS), and vue3-carousel-nuxt. It is also configured for dark mode with TailwindCSS.
+Welcome to my Nuxt Template App! This project is a template for creating applications using Nuxt 3, TailwindCSS, NuxtUI, Sitemap.xml, Animate on Scroll (AOS). It is also configured for dark mode with TailwindCSS.
 
 ## Features
 
@@ -9,7 +9,6 @@ Welcome to my Nuxt Template App! This project is a template for creating applica
 - **NuxtUI**: A set of UI components for Nuxt.
 - **Sitemap.xml**: Automatically generate a sitemap for your application.
 - **Animate on Scroll (AOS)**: Add animations to your scroll events.
-- **vue3-carousel-nuxt**: A flexible and responsive carousel for Vue 3.
 - **Dark Mode**: Configured for dark mode using TailwindCSS.
 
 ## Getting Started
@@ -73,9 +72,6 @@ The sitemap configuration is located in the `nuxt.config.js` file. You can custo
 ## Animate on Scroll (AOS)
 AOS is configured in the `nuxt.config.js` file. You can customize the animations and other settings as needed. To use AOS in your components, add the appropriate data-aos attributes to your HTML elements.
 
-## vue3-carousel-nuxt
-To use the carousel component, import it in your components or pages and use it as shown in the vue3-carousel documentation.
-
 ## Dark Mode
 Dark mode is enabled using TailwindCSS. You can customize the dark mode settings in the `tailwind.config.js` file.
 
@@ -87,4 +83,3 @@ This project is licensed under the `MIT License`. See the LICENSE file for detai
 - TailwindCSS
 - NuxtUI
 - AOS
-- vue3-carousel

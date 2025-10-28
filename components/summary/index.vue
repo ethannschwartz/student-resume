@@ -1,6 +1,6 @@
 <!-- components/summary/index.vue -->
 <template>
-  <section class="h-screen relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100">
+  <section class="h-screen relative bg-gradient-to-br from-gray-50 via-white to-gray-100">
     <!-- Decorative architectural lines -->
     <div class="absolute inset-0 opacity-5">
       <div class="absolute top-0 left-1/4 w-px h-full bg-gray-900"></div>
@@ -61,10 +61,7 @@
           <div class="relative aspect-square">
             <!-- Placeholder for architectural image -->
             <div class="absolute inset-0 bg-gray-200 flex items-center justify-center">
-              <div class="text-center space-y-4">
-                <i class="fi fi-rr-building text-6xl text-gray-400"></i>
-                <p class="text-sm text-gray-500">Portfolio Image</p>
-              </div>
+              <img :src="profilePicture" alt="oryan-malka-schwartz" />
             </div>
 
             <!-- Accent blocks -->
@@ -83,5 +80,5 @@
 </template>
 
 <script setup>
-
+import profilePicture from '~/assets/images/oryan-profile-picture.jpeg';
 </script>

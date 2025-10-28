@@ -1,6 +1,6 @@
 <!-- components/skills/index.vue -->
 <template>
-  <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 py-20 px-6 relative overflow-hidden">
+  <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800 py-20 px-6 relative">
     <!-- Decorative grid pattern -->
     <div class="absolute inset-0 opacity-5">
       <div class="grid grid-cols-12 gap-4 h-full">

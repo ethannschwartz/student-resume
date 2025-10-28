@@ -10,18 +10,13 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@flaticon/flaticon-uicons": "^3.3.1",
-    "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^4.0.0",
-    "@nuxtjs/i18n": "^8.5.5",
     "@nuxtjs/sitemap": "^5.3.5",
-    "nuxt": "^4.1.2",
-    "nuxt-aos": "^1.2.5",
-    "vue": "^3.4.0",
-    "vue3-carousel-nuxt": "^1.1.2",
     "@tailwindcss/typography": "^0.5.18",
     "@tanstack/vue-table": "^8.21.3",
     "lodash": "^4.17.21",
+    "nuxt": "^4.1.2",
+    "vue": "^3.4.0",
     "vue-router": "^4.4.0",
     "zod": "^4.1.11"
   },
