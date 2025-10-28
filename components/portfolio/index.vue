@@ -68,11 +68,10 @@
         <!-- Project 2: Urban Renewal -->
         <div data-aos="fade-up" class="grid md:grid-cols-2 gap-12 items-center">
           <div class="relative">
-            <div class="bg-gray-200 aspect-[4/3] flex items-center justify-center">
-              <div class="text-center space-y-4">
-                <i class="fi fi-rr-city text-7xl text-gray-400"></i>
-                <p class="text-sm text-gray-500">Urban Renewal Project</p>
-              </div>
+            <div>
+              <UCarousel auto-height arrows v-slot="{ item }" :items="studioProjectImages" autoplay loop>
+                <img :src="item" :alt="`studio-project-img-${item}`" />
+              </UCarousel>
             </div>
             <div class="absolute -top-6 -right-6 w-32 h-32 bg-gray-900 -z-10"></div>
           </div>
@@ -168,7 +167,7 @@
       </div>
 
       <!-- Portfolio Note -->
-      <div data-aos="fade-up" class="mt-20 text-center">
+      <div data-aos="fade-up" class="my-20 text-center">
         <p class="text-gray-600 mb-6">Additional projects and detailed drawings available upon request</p>
         <a href="mailto:Oryanschwartz@gmail.com"
            class="inline-flex items-center gap-2 px-8 py-3 bg-gray-900 text-white hover:bg-gray-800 transition-all duration-300 font-medium">
@@ -181,4 +180,17 @@
 </template>
 
 <script setup>
+import studioProject1 from '@/assets/images/studio-project-1.png';
+import studioProject2 from '@/assets/images/studio-project-2.png';
+import studioProject3 from '@/assets/images/studio-project-3.png';
+import studioProject4 from '@/assets/images/studio-project-4.png';
+import studioProject5 from '@/assets/images/studio-project-5.png';
+
+const studioProjectImages = [
+    studioProject1,
+    studioProject2,
+    studioProject3,
+    studioProject4,
+    studioProject5,
+];
 </script>

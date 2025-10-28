@@ -1,7 +1,16 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap');
+
+/* customs global styling */
 :root {
     --ui-radius: 0.25rem;
     scroll-behavior: smooth;
+}
+
+.font-bold, .font-semibold, .font-medium {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-weight: 600;
 }
