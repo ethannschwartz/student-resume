@@ -3,4 +3,5 @@
 
 :root {
     --ui-radius: 0.25rem;
+    scroll-behavior: smooth;
 }
