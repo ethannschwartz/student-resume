@@ -10,8 +10,7 @@ export default defineNuxtConfig({
     head: {
       meta: [
         {
-          name: 'google-site-verification',
-          // content: 'enter-site-validation-key-here',
+          content: '7cKekzd0J5c6N3sNQOhJgtF--mGXywInJlG0e3UQhdQ',
         },
       ],
     },
