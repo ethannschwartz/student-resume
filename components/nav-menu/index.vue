@@ -1,8 +1,8 @@
 <template>
   <ul class="w-full flex flex-col items-center justify-end">
     <li v-for="link in sections" :key="link.href" class="w-full">
-      <a :href="link.href" class="active:bg-gray-100 p-2 flex items-center w-full justify-end duration-300">
-        <div class="text-lg font-semibold text-right w-fit relative">
+      <a :href="link.href" class="active:bg-gray-100 p-2 flex items-center w-full duration-300">
+        <div class="text-lg font-semibold w-fit relative">
           {{link.name}}
         </div>
       </a>

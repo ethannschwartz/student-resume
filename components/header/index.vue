@@ -8,7 +8,6 @@
     <template #left>
       <div>
         <h5 class="font-bold">Oryan Malka-Schwartz</h5>
-        <p class="text-xs type-secondary">052-880-9027</p>
       </div>
     </template>
     <template #right>
@@ -23,7 +22,11 @@
             </a>
           </li>
         </ul>
-        <UDropdownMenu :items="languages" :content="{ side: 'bottom', align: 'end' }" @update:open="(isOpen) => isOpen && updateLanguageMenu()">
+        <UDropdownMenu
+            :items="languages"
+            :content="{ side: 'bottom', align: 'end' }"
+            @update:open="(isOpen) => isOpen && updateLanguageMenu()"
+        >
           <UButton color="neutral" variant="ghost" trailing-icon="i-lucide-globe" />
         </UDropdownMenu>
       </div>
@@ -42,13 +45,13 @@ const languages = computed(() => [
     {
       label: 'English',
       value: 'en',
-      icon: locale.value === 'en' ? 'i-lucide-check' : undefined,
+      icon: locale.value === 'en' ? 'i-lucide-check' : ' ',
       onClick: () => switchLanguage('en')
     },
     {
       label: 'עברית',
       value: 'he',
-      icon: locale.value === 'he' ? 'i-lucide-check' : undefined,
+      icon: locale.value === 'he' ? 'i-lucide-check' : ' ',
       onClick: () => switchLanguage('he')
     }
   ]
