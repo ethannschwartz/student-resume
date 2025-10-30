@@ -6,8 +6,9 @@
       </div>
     </template>
     <template #left>
-      <div>
-        <h5 class="font-bold">Oryan Malka-Schwartz</h5>
+      <div class="flex flex-col">
+        <h5 class="font-bold leading-none">Oryan Malka-Schwartz</h5>
+        <h5 class=" text-right leading-none font-medium text-slate-400 text-sm">אוריין מלכה–שוורץ</h5>
       </div>
     </template>
     <template #right>
